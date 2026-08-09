@@ -1,0 +1,114 @@
+[
+  {
+    "conversation_id": "conv_1001",
+    "type": "direct",
+    "title": null,
+    "participants": [
+      {
+        "user_id": "usr_101",
+        "name": "Rahul Sharma",
+        "email": "rahul.sharma@example.com"
+      },
+      {
+        "user_id": "usr_102",
+        "name": "Priya Mehta",
+        "email": "priya.mehta@example.com"
+      }
+    ],
+    "last_message_id": "msg_5005",
+    "last_message_preview": "Sure, I'll review the API changes and get back to you.",
+    "unread_count": 2,
+    "created_at": "2026-08-08T09:15:00Z",
+    "updated_at": "2026-08-09T10:42:00Z",
+    "status": "active"
+  },
+  {
+    "conversation_id": "conv_1002",
+    "type": "group",
+    "title": "Backend Team",
+    "participants": [
+      {
+        "user_id": "usr_101",
+        "name": "Rahul Sharma",
+        "email": "rahul.sharma@example.com"
+      },
+      {
+        "user_id": "usr_103",
+        "name": "Amit Verma",
+        "email": "amit.verma@example.com"
+      },
+      {
+        "user_id": "usr_104",
+        "name": "Neha Kapoor",
+        "email": "neha.kapoor@example.com"
+      },
+      {
+        "user_id": "usr_105",
+        "name": "Arjun Patel",
+        "email": "arjun.patel@example.com"
+      }
+    ],
+    "last_message_id": "msg_5012",
+    "last_message_preview": "Deployment has been scheduled for 8:30 PM today.",
+    "unread_count": 4,
+    "created_at": "2026-08-01T06:30:00Z",
+    "updated_at": "2026-08-09T13:20:00Z",
+    "status": "active"
+  },
+  {
+    "conversation_id": "conv_1003",
+    "type": "support",
+    "title": "Payment Issue - Order #ORD-78421",
+    "participants": [
+      {
+        "user_id": "usr_106",
+        "name": "Vikram Singh",
+        "email": "vikram.singh@example.com"
+      },
+      {
+        "user_id": "usr_201",
+        "name": "Support Team",
+        "email": "support@example.com"
+      }
+    ],
+    "last_message_id": "msg_5020",
+    "last_message_preview": "Your refund has been initiated and should reflect within 5-7 business days.",
+    "unread_count": 0,
+    "created_at": "2026-08-06T11:20:00Z",
+    "updated_at": "2026-08-08T16:45:00Z",
+    "status": "resolved"
+  },
+  {
+    "conversation_id": "conv_1004",
+    "type": "group",
+    "title": "Project Phoenix",
+    "participants": [
+      {
+        "user_id": "usr_107",
+        "name": "Sneha Iyer",
+        "email": "sneha.iyer@example.com"
+      },
+      {
+        "user_id": "usr_108",
+        "name": "Karan Malhotra",
+        "email": "karan.malhotra@example.com"
+      },
+      {
+        "user_id": "usr_109",
+        "name": "Meera Joshi",
+        "email": "meera.joshi@example.com"
+      },
+      {
+        "user_id": "usr_110",
+        "name": "Rohit Nair",
+        "email": "rohit.nair@example.com"
+      }
+    ],
+    "last_message_id": "msg_5028",
+    "last_message_preview": "The staging environment is ready for QA testing.",
+    "unread_count": 1,
+    "created_at": "2026-07-28T08:00:00Z",
+    "updated_at": "2026-08-09T09:05:00Z",
+    "status": "active"
+  }
+]
