@@ -3,7 +3,9 @@
     "message_id": "msg_5001",
     "conversation_id": "conv_1001",
     "sender_id": "usr_101",
-    "receiver_ids": ["usr_102"],
+    "receiver_ids": [
+      "usr_102"
+    ],
     "message_type": "text",
     "content": "Hey Priya, did you get a chance to look at the authentication changes?",
     "attachments": [],
@@ -15,7 +17,9 @@
     "message_id": "msg_5002",
     "conversation_id": "conv_1001",
     "sender_id": "usr_102",
-    "receiver_ids": ["usr_101"],
+    "receiver_ids": [
+      "usr_101"
+    ],
     "message_type": "text",
     "content": "Yes, I went through them. The JWT flow looks good, but I have a question about token expiration.",
     "attachments": [],
@@ -27,7 +31,9 @@
     "message_id": "msg_5003",
     "conversation_id": "conv_1001",
     "sender_id": "usr_101",
-    "receiver_ids": ["usr_102"],
+    "receiver_ids": [
+      "usr_102"
+    ],
     "message_type": "text",
     "content": "I'm keeping access tokens valid for 15 minutes and refresh tokens for 7 days.",
     "attachments": [],
@@ -39,7 +45,9 @@
     "message_id": "msg_5004",
     "conversation_id": "conv_1001",
     "sender_id": "usr_102",
-    "receiver_ids": ["usr_101"],
+    "receiver_ids": [
+      "usr_101"
+    ],
     "message_type": "text",
     "content": "That makes sense. We should also invalidate the refresh token when the user changes their password.",
     "attachments": [],
@@ -51,7 +59,9 @@
     "message_id": "msg_5005",
     "conversation_id": "conv_1001",
     "sender_id": "usr_101",
-    "receiver_ids": ["usr_102"],
+    "receiver_ids": [
+      "usr_102"
+    ],
     "message_type": "text",
     "content": "Sure, I'll review the API changes and get back to you.",
     "attachments": [],
@@ -63,7 +73,11 @@
     "message_id": "msg_5006",
     "conversation_id": "conv_1002",
     "sender_id": "usr_101",
-    "receiver_ids": ["usr_103", "usr_104", "usr_105"],
+    "receiver_ids": [
+      "usr_103",
+      "usr_104",
+      "usr_105"
+    ],
     "message_type": "text",
     "content": "The payment service changes are ready for review.",
     "attachments": [],
@@ -75,7 +89,11 @@
     "message_id": "msg_5007",
     "conversation_id": "conv_1002",
     "sender_id": "usr_103",
-    "receiver_ids": ["usr_101", "usr_104", "usr_105"],
+    "receiver_ids": [
+      "usr_101",
+      "usr_104",
+      "usr_105"
+    ],
     "message_type": "text",
     "content": "I'll take a look at the database changes first.",
     "attachments": [],
@@ -87,7 +105,11 @@
     "message_id": "msg_5008",
     "conversation_id": "conv_1002",
     "sender_id": "usr_104",
-    "receiver_ids": ["usr_101", "usr_103", "usr_105"],
+    "receiver_ids": [
+      "usr_101",
+      "usr_103",
+      "usr_105"
+    ],
     "message_type": "text",
     "content": "I've reviewed the API contract. We need to add an idempotency key for payment requests.",
     "attachments": [],
@@ -99,7 +121,11 @@
     "message_id": "msg_5009",
     "conversation_id": "conv_1002",
     "sender_id": "usr_105",
-    "receiver_ids": ["usr_101", "usr_103", "usr_104"],
+    "receiver_ids": [
+      "usr_101",
+      "usr_103",
+      "usr_104"
+    ],
     "message_type": "text",
     "content": "Agreed. I'll update the implementation and add test cases for duplicate payment requests.",
     "attachments": [],
@@ -111,7 +137,11 @@
     "message_id": "msg_5010",
     "conversation_id": "conv_1002",
     "sender_id": "usr_101",
-    "receiver_ids": ["usr_103", "usr_104", "usr_105"],
+    "receiver_ids": [
+      "usr_103",
+      "usr_104",
+      "usr_105"
+    ],
     "message_type": "notification",
     "content": "The staging deployment completed successfully.",
     "attachments": [],
@@ -123,7 +153,11 @@
     "message_id": "msg_5011",
     "conversation_id": "conv_1002",
     "sender_id": "usr_104",
-    "receiver_ids": ["usr_101", "usr_103", "usr_105"],
+    "receiver_ids": [
+      "usr_101",
+      "usr_103",
+      "usr_105"
+    ],
     "message_type": "text",
     "content": "Everything looks good from my side. We can proceed with production deployment.",
     "attachments": [],
@@ -135,7 +169,11 @@
     "message_id": "msg_5012",
     "conversation_id": "conv_1002",
     "sender_id": "usr_101",
-    "receiver_ids": ["usr_103", "usr_104", "usr_105"],
+    "receiver_ids": [
+      "usr_103",
+      "usr_104",
+      "usr_105"
+    ],
     "message_type": "notification",
     "content": "Deployment has been scheduled for 8:30 PM today.",
     "attachments": [],
@@ -147,7 +185,9 @@
     "message_id": "msg_5013",
     "conversation_id": "conv_1003",
     "sender_id": "usr_106",
-    "receiver_ids": ["usr_201"],
+    "receiver_ids": [
+      "usr_201"
+    ],
     "message_type": "text",
     "content": "The amount was deducted from my account, but my order was cancelled. Could you please check?",
     "attachments": [
@@ -165,7 +205,9 @@
     "message_id": "msg_5014",
     "conversation_id": "conv_1003",
     "sender_id": "usr_201",
-    "receiver_ids": ["usr_106"],
+    "receiver_ids": [
+      "usr_106"
+    ],
     "message_type": "text",
     "content": "I'm checking the payment transaction with our payment provider. Could you share the transaction ID?",
     "attachments": [],
@@ -177,7 +219,9 @@
     "message_id": "msg_5015",
     "conversation_id": "conv_1003",
     "sender_id": "usr_106",
-    "receiver_ids": ["usr_201"],
+    "receiver_ids": [
+      "usr_201"
+    ],
     "message_type": "text",
     "content": "Sure. The transaction ID is TXN-98451273.",
     "attachments": [],
@@ -189,7 +233,9 @@
     "message_id": "msg_5016",
     "conversation_id": "conv_1003",
     "sender_id": "usr_201",
-    "receiver_ids": ["usr_106"],
+    "receiver_ids": [
+      "usr_106"
+    ],
     "message_type": "notification",
     "content": "We found the failed transaction and have initiated a refund.",
     "attachments": [],
@@ -201,7 +247,9 @@
     "message_id": "msg_5017",
     "conversation_id": "conv_1003",
     "sender_id": "usr_106",
-    "receiver_ids": ["usr_201"],
+    "receiver_ids": [
+      "usr_201"
+    ],
     "message_type": "text",
     "content": "Thanks for the update. I'll wait for the refund.",
     "attachments": [],
@@ -213,7 +261,9 @@
     "message_id": "msg_5018",
     "conversation_id": "conv_1003",
     "sender_id": "usr_201",
-    "receiver_ids": ["usr_106"],
+    "receiver_ids": [
+      "usr_106"
+    ],
     "message_type": "notification",
     "content": "Your refund has been processed successfully.",
     "attachments": [],
@@ -225,7 +275,9 @@
     "message_id": "msg_5019",
     "conversation_id": "conv_1003",
     "sender_id": "usr_201",
-    "receiver_ids": ["usr_106"],
+    "receiver_ids": [
+      "usr_106"
+    ],
     "message_type": "notification",
     "content": "The refund should reflect in your original payment method within 5-7 business days.",
     "attachments": [],
@@ -237,7 +289,9 @@
     "message_id": "msg_5020",
     "conversation_id": "conv_1003",
     "sender_id": "usr_201",
-    "receiver_ids": ["usr_106"],
+    "receiver_ids": [
+      "usr_106"
+    ],
     "message_type": "notification",
     "content": "Your refund has been initiated and should reflect within 5-7 business days.",
     "attachments": [],
@@ -249,7 +303,11 @@
     "message_id": "msg_5021",
     "conversation_id": "conv_1004",
     "sender_id": "usr_107",
-    "receiver_ids": ["usr_108", "usr_109", "usr_110"],
+    "receiver_ids": [
+      "usr_108",
+      "usr_109",
+      "usr_110"
+    ],
     "message_type": "text",
     "content": "The new dashboard implementation is almost complete.",
     "attachments": [],
@@ -261,7 +319,11 @@
     "message_id": "msg_5022",
     "conversation_id": "conv_1004",
     "sender_id": "usr_108",
-    "receiver_ids": ["usr_107", "usr_109", "usr_110"],
+    "receiver_ids": [
+      "usr_107",
+      "usr_109",
+      "usr_110"
+    ],
     "message_type": "text",
     "content": "Great. Have the API response changes been merged?",
     "attachments": [],
@@ -273,7 +335,11 @@
     "message_id": "msg_5023",
     "conversation_id": "conv_1004",
     "sender_id": "usr_107",
-    "receiver_ids": ["usr_108", "usr_109", "usr_110"],
+    "receiver_ids": [
+      "usr_108",
+      "usr_109",
+      "usr_110"
+    ],
     "message_type": "text",
     "content": "Yes, the backend changes were merged this morning.",
     "attachments": [],
@@ -285,7 +351,11 @@
     "message_id": "msg_5024",
     "conversation_id": "conv_1004",
     "sender_id": "usr_109",
-    "receiver_ids": ["usr_107", "usr_108", "usr_110"],
+    "receiver_ids": [
+      "usr_107",
+      "usr_108",
+      "usr_110"
+    ],
     "message_type": "text",
     "content": "I'll start validating the dashboard with the updated API responses.",
     "attachments": [],
@@ -297,7 +367,11 @@
     "message_id": "msg_5025",
     "conversation_id": "conv_1004",
     "sender_id": "usr_110",
-    "receiver_ids": ["usr_107", "usr_108", "usr_109"],
+    "receiver_ids": [
+      "usr_107",
+      "usr_108",
+      "usr_109"
+    ],
     "message_type": "text",
     "content": "I found a minor issue with the date filter. I'll raise a ticket for it.",
     "attachments": [],
@@ -309,7 +383,11 @@
     "message_id": "msg_5026",
     "conversation_id": "conv_1004",
     "sender_id": "usr_107",
-    "receiver_ids": ["usr_108", "usr_109", "usr_110"],
+    "receiver_ids": [
+      "usr_108",
+      "usr_109",
+      "usr_110"
+    ],
     "message_type": "text",
     "content": "Thanks. Please prioritize it because QA is starting tomorrow.",
     "attachments": [],
@@ -321,7 +399,11 @@
     "message_id": "msg_5027",
     "conversation_id": "conv_1004",
     "sender_id": "usr_109",
-    "receiver_ids": ["usr_107", "usr_108", "usr_110"],
+    "receiver_ids": [
+      "usr_107",
+      "usr_108",
+      "usr_110"
+    ],
     "message_type": "notification",
     "content": "The date filter issue has been fixed and deployed to staging.",
     "attachments": [],
@@ -333,7 +415,11 @@
     "message_id": "msg_5028",
     "conversation_id": "conv_1004",
     "sender_id": "usr_107",
-    "receiver_ids": ["usr_108", "usr_109", "usr_110"],
+    "receiver_ids": [
+      "usr_108",
+      "usr_109",
+      "usr_110"
+    ],
     "message_type": "notification",
     "content": "The staging environment is ready for QA testing.",
     "attachments": [],
