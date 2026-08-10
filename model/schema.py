@@ -1,6 +1,11 @@
 from pydantic import BaseModel, Field
 from typing import Annotated, Literal, Optional
 
+class ParticipantSchema(BaseModel):
+    user_id: Annotated[str, Field(..., description="The unique identifier for the participant")]
+    name: Annotated[str, Field(..., description="The name of the participant")]
+    email: Annotated[str, Field(..., description="The email address of the participant")]
+
 class ConversationSchema(BaseModel):
     id: Annotated[str, Field(..., description="The unique identifier for the conversation")]
     participants: Annotated[list[ParticipantSchema], Field(..., description="List of participants in the conversation")]
@@ -10,20 +15,31 @@ class ConversationSchema(BaseModel):
     created_at: Annotated[str, Field(..., description="The timestamp when the conversation was created")]
     updated_at: Annotated[str, Field(..., description="The timestamp when the conversation was last updated")]
 
-
-class ParticipantSchema(BaseModel):
-    user_id: Annotated[str, Field(..., description="The unique identifier for the participant")]
-    name: Annotated[str, Field(..., description="The name of the participant")]
-    email: Annotated[str, Field(..., description="The email address of the participant")]
-
+class AttachmentSchema(BaseModel):
+    file_name: Annotated[str, Field(..., description="The name of the attached file")]
+    file_type: Annotated[str, Field(..., description="The MIME type of the attachment")]
+    url: Annotated[str, Field(..., description="The URL where the attachment can be accessed")]
 
 class MessageSchema(BaseModel):
     message_id: Annotated[str, Field(..., description="The unique identifier for the message")]
     conversation_id: Annotated[str, Field(..., description="The ID of the conversation to which the message belongs")]
     sender_id: Annotated[str, Field(..., description="The ID of the participant who sent the message")]
+    receiver_ids: Annotated[list[str], Field(default_factory=list, description="List of recipient participant IDs")]
+    message_type: Annotated[Literal["text", "image", "video", "notification"], Field(..., description="The type of the message")]
     content: Annotated[str, Field(..., description="The content of the message")]
-    message_type: Annotated[Literal["text", "image", "video"], Field(..., description="The type of the message, either 'text', 'image', or 'video'")]
+    attachments: Annotated[list[AttachmentSchema], Field(default_factory=list, description="List of file attachments")]
     created_at: Annotated[str, Field(..., description="The timestamp when the message was created")]
     read_at: Annotated[Optional[str], Field(None, description="The timestamp when the message was read, if applicable")]
-    status: Annotated[Literal["sent", "delivered", "read"], Field(..., description="The status of the message, either 'sent', 'delivered', or 'read'")]
+    status: Annotated[Literal["sent", "delivered", "read"], Field(..., description="The status of the message")]
+
+class CreateMessageSchema(BaseModel):
+    message_id: Annotated[str, Field(..., description="The unique identifier for the message")]
+    sender_id: Annotated[str, Field(..., description="The ID of the participant who sent the message")]
+    receiver_ids: Annotated[list[str], Field(default_factory=list, description="List of recipient participant IDs")]
+    message_type: Annotated[Literal["text", "image", "video", "notification"], Field(..., description="The type of the message")]
+    content: Annotated[str, Field(..., description="The content of the message")]
+    attachments: Annotated[list[AttachmentSchema], Field(default_factory=list, description="List of file attachments")]
+    created_at: Annotated[str, Field(..., description="The timestamp when the message was created")]
+    read_at: Annotated[Optional[str], Field(None, description="The timestamp when the message was read, if applicable")]
+    status: Annotated[Literal["sent", "delivered", "read"], Field(..., description="The status of the message")]
     
