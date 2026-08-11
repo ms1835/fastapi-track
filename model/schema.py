@@ -42,4 +42,8 @@ class CreateMessageSchema(BaseModel):
     created_at: Annotated[str, Field(..., description="The timestamp when the message was created")]
     read_at: Annotated[Optional[str], Field(None, description="The timestamp when the message was read, if applicable")]
     status: Annotated[Literal["sent", "delivered", "read"], Field(..., description="The status of the message")]
+
+class UpdateMessageSchema(BaseModel):
+    receiver_ids: Annotated[list[str], Field(default_factory=list, description="Updated receiver IDs for the message")]
+    content: Annotated[str, Field(..., description="Updated content of the message")]
     

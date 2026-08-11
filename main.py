@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Path, HTTPException
 from fastapi.responses import JSONResponse
 from config.service import load_conversation_data, load_message_data, save_message_data
-from model.schema import MessageSchema, CreateMessageSchema
+from model.schema import MessageSchema, CreateMessageSchema, UpdateMessageSchema
 
 app = FastAPI()
 
@@ -53,3 +53,15 @@ def add_message_to_conversation(conversation_id: str, message: CreateMessageSche
     messages.append(validated_message)
     save_message_data(messages)
     return JSONResponse(status_code=201, content={"message": "Message added successfully", "data": validated_message})
+
+
+@app.patch("/messages/{message_id}")
+def update_message(message_id: str, updated_message: UpdateMessageSchema):
+    messages = load_message_data()
+    for message in messages:
+        if message["message_id"] == message_id:
+            message["receiver_ids"] = updated_message.receiver_ids
+            message["content"] = updated_message.content
+            save_message_data(messages)
+            return JSONResponse(status_code=200, content={"message": "Message updated successfully", "data": message})
+    raise HTTPException(status_code=404, detail="Message not found")
